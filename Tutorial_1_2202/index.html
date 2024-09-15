@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Kennedy's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* The hero image */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("headshot.jpg");
+            height: 50vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Place text in the middle of the image */
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        /* About Me Section */
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+
+        .projects-section h1 {
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            max-width: 32%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #04AA6D;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .contact-container h2, .contact-container p {
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #474e5d;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>I am Logan Kennedy</h1>
+            <p>I'm an Engineering Student at Western</p>
+            <button>Contact Me</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h1>About Me</h1>
+        <p>I am currently studying software engineering at Western University. I also hope to pair an Ivey HBA degree along with my engineering degree.</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section" id="projects">
+        <h1>My Projects</h1>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="R.png" alt="Project 1">
+                    <div class="container">
+                        <h2>Password Manager</h2>
+                        <p>An app that stores and encrypts passwords.</p>
+                        <a href="https://github.com/yourgithub/project1" target="_blank"><button class="button">View Project</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="proj2.png" alt="Project 2">
+                    <div class="container">
+                        <h2>PDF Reader</h2>
+                        <p>Utilizes ChatGPT to pull key information from a pdf.</p>
+                        <a href="https://github.com/yourgithub/project2" target="_blank"><button class="button">View Project</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="proj3.png" alt="Project 3">
+                    <div class="container">
+                        <h2>Stock Tracker</h2>
+                        <p>Sends user sms messages when chosen stock has dramatic changes.</p>
+                        <a href="https://github.com/yourgithub/project3" target="_blank"><button class="button">View Project</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-container" id="contact">
+        <h2>Contact Me</h2>
+        <p>Set up a coffee meetup or zoom meeting.</p>
+
+        <div class="contact-form">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Logan Kennedy</p>
+        <br>
+        <p>lkenne69@uwo.ca</p>
+    </div>
+
+</body>
+</html>
